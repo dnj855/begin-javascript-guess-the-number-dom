@@ -6,7 +6,24 @@
     <title>Guess the number</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="font-heading uppercase text-6xl text-center pt-4">
+      Guess the number
+    </header>
+    <div class="max-w-lg mx-auto">
+      <div id="start-game" class="mt-60">
+        <p>
+          The application will generate a random number, and your task is to
+          find it in as few attempts as possible.
+        </p>
+        <a
+          href="#"
+          id="start-button"
+          class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-neutral-900 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90 h-10 px-4 py-2 mt-4 hover:scale-110"
+          >Start</a
+        >
+      </div>
+      <div id="game" class="hidden"></div>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
