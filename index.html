@@ -24,7 +24,10 @@
         >
       </div>
       <div id="game" class="hidden space-y-6 w-3/4">
-        <p>I generated a number between 0 and 500, try to find it 😆</p>
+        <p>
+          I generated a number between <span class="min-number"></span> and
+          <span class="max-number"></span>, try to find it 😆
+        </p>
         <p class="text-right">Score : <span id="score">0</span></p>
         <form action="#">
           <label for="try" class="text-sm">Your guess</label>
@@ -44,14 +47,15 @@
           </div>
           <p class="text-sm text-gray-400">Enter your guessing number</p>
         </form>
+        <p id="result" class="hidden"></p>
         <div>
           <div
             id="guesses"
             class="w-full border border-neutral-600 rounded-lg h-10"
           ></div>
           <div class="flex justify-between mt-2">
-            <p>0</p>
-            <p>500</p>
+            <p class="min-number"></p>
+            <p class="max-number"></p>
           </div>
         </div>
       </div>
