@@ -80,14 +80,13 @@ class Game {
     cross.textContent = won ? "🟢" : "x";
     cross.style.position = "absolute";
     cross.style.top = "50%";
-    cross.style.transform = "translate(-50%, -50%)";
+    cross.style.transform = "translateY(-50%)";
     this.guessesDiv.appendChild(cross);
-    const guessPosition = Math.max(
-      ((guess - Game.MIN_NUMBER) / (Game.MAX_NUMBER - Game.MIN_NUMBER)) *
-        (this.guessesDiv.clientWidth - cross.offsetWidth),
-      0
+    const percentage = Math.min(
+      Math.max(0, (guess / Game.MAX_NUMBER) * 100),
+      98.5
     );
-    cross.style.left = `${Math.max(guessPosition, cross.offsetWidth / 2)}px`;
+    cross.style.left = `${percentage}%`;
   }
 
   showGame() {
